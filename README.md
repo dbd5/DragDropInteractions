@@ -1,16 +1,112 @@
-Drag and Drop Interaction Ideas
-=========
+DragDropInteractions Extension for Yii 2
+=======================
 
-Some inspiration for drag and drop interactions for the modern UI.
+Bottom Area:
+Add to you AppAsset
+```php
+class AppAsset extends AssetBundle
+{
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\DragDropInteractions\assets\DragDropInteractionBottomArea',
+    ];
+}
+```
 
-[Article on Codrops](http://tympanus.net/codrops/?p=21275)
+Sidebar:
+Add to you AppAsset
+```php
+class AppAsset extends AssetBundle
+{
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\DragDropInteractions\assets\DragDropInteractionSidebar',
+    ];
+}
+```
 
-[Demo](http://tympanus.net/Development/DragDropInteractions/)
+Page Scale:
+Add to you AppAsset
+```php
+class AppAsset extends AssetBundle
+{
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\DragDropInteractions\assets\DragDropInteractionPageScale',
+    ];
+}
+```
 
-Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is".
+Modal:
+Add to you AppAsset
+```php
+class AppAsset extends AssetBundle
+{
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\DragDropInteractions\assets\DragDropInteractionModal',
+    ];
+}
+```
 
-Read more here: [License](http://tympanus.net/codrops/licensing/)
+Icons:
+Add to you AppAsset
+```php
+class AppAsset extends AssetBundle
+{
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\DragDropInteractions\assets\DragDropInteractionIcons',
+    ];
+}
+```
 
-Follow us: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/pages/Codrops/159107397912), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/)
+Bottom Slide:
+Add to you AppAsset
+```php
+class AppAsset extends AssetBundle
+{
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\DragDropInteractions\assets\DragDropInteractionBottomSlide',
+    ];
+}
+```
 
-[© Codrops 2014](http://www.codrops.com)
+Reveal:
+Add to you AppAsset
+```php
+class AppAsset extends AssetBundle
+{
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\DragDropInteractions\assets\DragDropInteractionReveal',
+    ];
+}
+```
+
+Installation
+------------
+
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+
+Either run
+
+```
+php composer.phar require --prefer-dist yiisoft/yii2-drag-drop-interactions "*"
+```
+
+or add
+
+```json
+"yiisoft/yii2-drag-drop-interactions": "*"
+```
+
+to the require section of your composer.json.
