@@ -1,5 +1,5 @@
 {
-    "name": "yiisoft/yii2-drag-drop-interactions",
+    "name": "yiisoft/yii2-DragDropInteractions",
     "description": "Some inspiration for drag and drop interactions for the modern UI for Yii2.",
     "license": "MIT",
     "authors": [
@@ -15,6 +15,9 @@
     "autoload": {
         "psr-4": {
             "yii\\DragDropInteractions\\": ""
-        }
+        },
+        "classmap": [
+            ""
+        ]
     }
 }

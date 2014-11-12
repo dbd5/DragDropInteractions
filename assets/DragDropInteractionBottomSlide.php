@@ -1,5 +1,10 @@
 <?php
 namespace yii\DragDropInteractions\assets;
+
+use yii\web\AssetBundle;
+use Yii;
+use yii\web\View;
+
 /**
  * Class DragDropInteractionBottomSlide
  *
@@ -13,14 +18,19 @@ class DragDropInteractionBottomSlide extends AssetBundle
     // to specify the sourcePath property. Notice the @vendor alias used.
     public $sourcePath = '@vendor/yiisoft/yii2-drag-drop-interactions/src';
     public $css = [
-        'css/demo.css',
         'css/bottom-slide.css',
-    ];
-    public $js = [
-        'js/modernizr.custom.js',
     ];
 
     public $depends = [
         'yii\DragDropInteractions\assets\DragDropInteraction',
     ];
+
+    public $jsOptions = ['position' => View::POS_END];
+
+    public static function register($view)
+    {
+        parent::register($view);
+
+        Yii::setAlias('dragDropInteractionMedia', Yii::$app->getAssetManager()->bundles[static::className()]->baseUrl);
+    }
 } 

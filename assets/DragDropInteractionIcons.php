@@ -1,5 +1,10 @@
 <?php
 namespace yii\DragDropInteractions\assets;
+
+use yii\web\AssetBundle;
+use yii\web\View;
+use Yii;
+
 /**
  * Class DragDropInteractionIcons
  *
@@ -13,14 +18,19 @@ class DragDropInteractionIcons extends AssetBundle
     // to specify the sourcePath property. Notice the @vendor alias used.
     public $sourcePath = '@vendor/yiisoft/yii2-drag-drop-interactions/src';
     public $css = [
-        'css/demo.css',
         'css/icons.css',
-    ];
-    public $js = [
-        'js/modernizr.custom.js',
     ];
 
     public $depends = [
         'yii\DragDropInteractions\assets\DragDropInteraction',
     ];
+
+    public $jsOptions = ['position' => View::POS_END];
+
+    public static function register($view)
+    {
+        parent::register($view);
+
+        Yii::setAlias('dragDropInteractionMedia', Yii::$app->getAssetManager()->bundles[static::className()]->baseUrl);
+    }
 } 

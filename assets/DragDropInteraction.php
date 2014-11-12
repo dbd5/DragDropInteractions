@@ -1,5 +1,10 @@
 <?php
 namespace yii\DragDropInteractions\assets;
+
+use yii\web\AssetBundle;
+use yii\web\View;
+use Yii;
+
 /**
  * Class DragDropInteraction
  *
@@ -18,6 +23,18 @@ class DragDropInteraction extends AssetBundle
     ];
     public $js = [
         'js/draggabilly.pkgd.min.js',
-        'js/dragdrop.js'
+        'js/modernizr.custom.js',
+        'js/dragdrop.js',
     ];
+    public $jsOptions = ['position' => View::POS_HEAD];
+    public $depends = [
+        'yii\web\YiiAsset',
+    ];
+
+    public static function register($view)
+    {
+        parent::register($view);
+
+        Yii::setAlias('dragDropInteractionMedia', Yii::$app->getAssetManager()->bundles[static::className()]->baseUrl);
+    }
 } 
